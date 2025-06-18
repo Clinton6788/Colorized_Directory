@@ -1,6 +1,6 @@
 {
-    "name": "folder-depth-colorizer",
-    "displayName": "Folder Depth Colorizer",
+    "name": "colorized-directory",
+    "displayName": "Colorized Directory",
     "description": "Colorizes folders in the explorer based on their depth, similar to indent-rainbow.",
     "version": "0.0.1",
     "publisher": "your-name",
@@ -16,25 +16,30 @@
     "main": "./out/extension.js",
     "contributes": {
         "configuration": {
-        "type": "object",
-        "title": "Folder Depth Colorizer",
-        "properties": {
-            "folderDepthColorizer.colors": {
-            "type": "array",
-            "items": {
-                "type": "string"
-            },
-            "default": [
-                "#e0e0e0", "#d0d0ff", "#c0ffc0", "#ffd0d0", "#fffac0", "#d0f0ff"
-            ],
-            "description": "Colors to apply by folder depth. Index 0 = root level."
-            },
-            "folderDepthColorizer.barWidth": {
-            "type": "number",
-            "default": 3,
-            "description": "The width (in spaces) of the badge to simulate a vertical bar."
+            "type": "object",
+            "title": "Colorized Directory",
+            "properties": {
+                "colorizedDirectory.colors": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "default": [
+                        "#e0e0e0",
+                        "#d0d0ff",
+                        "#c0ffc0",
+                        "#ffd0d0",
+                        "#fffac0",
+                        "#d0f0ff"
+                    ],
+                    "description": "Colors to apply by folder depth. Index 0 = root level."
+                },
+                "colorizedDirectory.barWidth": {
+                    "type": "number",
+                    "default": 3,
+                    "description": "The width (in spaces) of the badge to simulate a vertical bar."
+                }
             }
-        }
         }
     },
     "scripts": {
@@ -45,9 +50,27 @@
         "test": "node ./out/test/runTest.js"
     },
     "devDependencies": {
-        "@types/vscode": "^1.70.0",
+        "@types/node": "^14.18.63",
+        "@types/vscode": "^1.101.0",
         "typescript": "^4.9.5",
-        "@types/node": "^14.14.37",
-        "vscode-test": "^1.6.0"
-    }
+        "vscode-test": "^1.6.1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Clinton6788/Colorized_Directory.git"
+    },
+    "keywords": [
+        "folder",
+        "directory",
+        "color",
+        "colorizer",
+        "vscode",
+        "extension"
+    ],
+    "author": "Clinton Hockenberry",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/Clinton6788/Colorized_Directory/issues"
+    },
+    "homepage": "https://github.com/Clinton6788/Colorized_Directory#readme"
 }
